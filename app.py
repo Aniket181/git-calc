@@ -5,6 +5,7 @@ def main():
     1. Add
     2. Subtract
     3. multiply
+    4. Divide
           """)
 
     choice = input("Enter your choice (1 or 2): ")
@@ -22,5 +23,17 @@ def main():
         a = float(input("Enter the first number: "))
         b = float(input("Enter the second number: "))
         result = multiply(a, b)
-        print(f"The product of {a} and {b} is: {result}")               
-        
+        print(f"The product of {a} and {b} is: {result}") 
+    elif choice == '4':
+        a = float(input("Enter the first number: "))
+        b = float(input("Enter the second number: "))
+        try:
+            result = divide(a, b)
+            print(f"The division of {a} by {b} is: {result}")
+        except ValueError as e:
+            print(e)
+    else:
+        print("Invalid choice. Please select a valid option.")
+              
+if __name__ == "__main__":
+    main()
