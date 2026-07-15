@@ -31,6 +31,11 @@ def main():
         b = float(input("Enter the width of the rectangle: "))
         result = area_of_rectangle(a, b)
         print(f"The area of the rectangle with length {a} and width {b} is: {result}") 
+    else:
+        print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":  
+    main()
 
                    
         
